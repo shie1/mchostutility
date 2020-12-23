@@ -2,7 +2,7 @@
     "name": "mchostutility",
     "productName": "MCHostUtility",
     "version": "1.0.0",
-    "description": "Host minecraft servers locally, with ease!",
+    "description": "Host Minecraft servers locally, with ease!",
     "main": "src/index.js",
     "scripts": {
         "start": "electron-forge start",
