@@ -29,12 +29,15 @@ function ngrokAuth() {
 }
 
 function host() {
-    let serverName = $('#serverName').val();
-    let serverFile = $('#serverFile').val();
-    let gamemode = $('#serverGM').val();
-    let difficulty = $('#serverDifficulty').val();
-    let maxPlayers = $('#serverPlayers').val();
-    let cracked = $('#serverCracked').val();
+    let server = {
+        name: $('#serverName').val(),
+        file: $('#serverFile').val(),
+        gamemode: $('#serverGM').val(),
+        difficulty: $('#serverDifficulty').val(),
+        maxPlayers: $('#serverPlayers').val(),
+        onlineMode: $('#serverCracked').val()
+    }
+    console.log(server)
 }
 
 $(':root').css('--screenH', `${height}px`)
