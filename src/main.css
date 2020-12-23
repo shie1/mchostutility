@@ -85,12 +85,11 @@ header div div span {
     color: white;
     background: #303030;
     width: 100vw;
-    height: 100vh;
-    padding-top: var(--headerH);
+    height: var(--contentH);
+    padding-top: calc(var(--headerH) / 2);
 }
 
 .content div {
-    padding-bottom: var(--headerH);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,8 +112,20 @@ header div div span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 1%;
 }
 
 .host form input[type=submit] {
-    width: 50%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: var(--headerH);
+}
+
+.host form input[type=file] {
+    background: #202020;
+    padding: 1%;
 }

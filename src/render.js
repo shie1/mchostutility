@@ -29,8 +29,12 @@ function ngrokAuth() {
 }
 
 function host() {
-    serverName = $('#serverName').val()
-    maxPlayers = $('#serverPlayers').val()
+    let serverName = $('#serverName').val();
+    let serverFile = $('#serverFile').val();
+    let gamemode = $('#serverGM').val();
+    let difficulty = $('#serverDifficulty').val();
+    let maxPlayers = $('#serverPlayers').val();
+    let cracked = $('#serverCracked').val();
 }
 
 $(':root').css('--screenH', `${height}px`)
