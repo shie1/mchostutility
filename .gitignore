@@ -88,6 +88,5 @@ typings/
 # Electron-Forge
 out/
 
-# sRQST
-credits.txt
-downloads/
+# App
+storage.json

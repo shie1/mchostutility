@@ -1,11 +1,44 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MCHostUtility</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    
+    <header>
+        <div>
+            <div class="headerB" id="closeApp">
+                <img draggable="false" src="icons/close.svg">
+            </div>
+            <div class="dragarea"></div>
+            <div>
+                <span>
+                    <script>document.write(document.title)</script>
+                </span>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="ngrok">
+            <span>Please register to ngrok.com and enter your auth token:</span>
+            <form action="#" id="ngrokForm" onsubmit="ngrokAuth();return false">
+                <input id="ngrokAuth" type="text" />
+                <input type="submit" />
+            </form>
+        </div>
+        <div class="host">
+            <form action="#" id="hostForm" onsubmit="host() ;return false">
+                <span>Server Name: <input type="text" id="serverName"></span>
+                <span>Max Players: <input type="number" min="1" max="40" id="serverPlayers"></span>
+                <input type="submit" />
+            </form>
+        </div>
+    </div>
+    <script defer src="render.js"></script>
 </body>
+
 </html>
