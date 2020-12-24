@@ -7,7 +7,7 @@
     "scripts": {
         "start": "electron-forge start",
         "package": "electron-forge package",
-        "make": "electron-forge make",
+        "make": "electron-forge make --arch x64 && electron-forge make --arch ia32",
         "publish": "electron-forge publish",
         "lint": "echo \"No linting configured\""
     },
@@ -22,11 +22,10 @@
             "packagerConfig": {
                 "icon": "icon.ico"
             },
-            "makers": [
-                {
+            "makers": [{
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
-                        "name": "sRQST"
+                        "name": "MCHostUtility"
                     }
                 },
                 {
