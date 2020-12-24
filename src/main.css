@@ -189,6 +189,7 @@ input[type=submit]:hover {
 }
 
 .host form input[type=image] {
+    height: 80%;
     background: none;
     filter: invert(1);
 }
