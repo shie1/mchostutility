@@ -16,6 +16,14 @@ function writeStorage(name, data) {
     return true
 }
 
+let tosrc
+
+if (storage.devmode) {
+    tosrc = './src'
+} else {
+    tosrc = './resources/app/src'
+}
+
 function delStorage(name) {
     delete storage[name]
     fs.writeFileSync('./storage.json', JSON.stringify(storage))
@@ -48,7 +56,8 @@ async function host() {
     ip = ip.substring(6)
     clipboard.writeText(ip)
     setTimeout(() => {
-        serverProcess = cp.exec(`start cmd /k "echo Server ip: ${ip} && java -Xms1024M -Xmx1024M -jar server.jar nogui"`, { cwd: path.resolve('./src/server') });
+
+        serverProcess = cp.exec(`start cmd /k "echo Server ip: ${ip} && java -Xms1024M -Xmx1024M -jar server.jar nogui"`, { cwd: path.resolve(tosrc + '/server') });
         serverProcess.on('close', () => {
             window.close()
         })

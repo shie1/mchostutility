@@ -2,6 +2,14 @@ const fs = require('fs');
 const storage = JSON.parse(fs.readFileSync('./storage.json'));
 const server = storage.server;
 
+let tosrc
+
+if (storage.devmode) {
+    tosrc = './src'
+} else {
+    tosrc = './resources/app/src'
+}
+
 let properties = `spawn-protection=16
 max-tick-time=60000
 query.port=25565
@@ -52,4 +60,4 @@ enable-rcon=false
 rate-limit=0
 motd=${server.name}`;
 
-fs.writeFileSync('src/server/server.properties', properties);
+fs.writeFileSync(tosrc + '/server/server.properties', properties);
