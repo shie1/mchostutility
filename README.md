@@ -1,5 +1,8 @@
 ## MCHostUtility
 Host Minecraft servers locally, with ease!
+
+<img height=400 src="https://i.imgur.com/k8ZqlxD.png">
+
 ## First start
 1. Sign up to [ngrok.com](ngrok.com "https://www.ngrok.com") and copy your auth token!
 2. Start MCHostUtility and paste in your token!
