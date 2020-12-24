@@ -25,15 +25,14 @@
     <div class="content">
         <div class="ngrok">
             <span>Please register to ngrok.com and enter your auth token!</span>
-            <form action="#" id="ngrokForm" onsubmit="ngrokAuth(); return false">
+            <form action="" id="ngrokForm" onsubmit="return false">
                 <input required id="ngrokAuth" type="text" />
                 <input type="submit" />
             </form>
         </div>
         <div class="host">
-            <form action="#" id="hostForm" onsubmit="host(); return false">
+            <form action="#" id="hostForm" onsubmit="return false">
                 <span>Server Name: <input required type="text" id="serverName" /></span>
-                <span>Owner Username: <input required type="text" id="serverOP" /></span>
                 <span>Gamemode: <select id="serverGM">
                     <option value="creative">Creative</option>
                     <option value="survival">Survival</option>
@@ -55,7 +54,7 @@
             </form>
         </div>
     </div>
-    <script defer src="render.js"></script>
+    <script src="render.js"></script>
 </body>
 
 </html>
