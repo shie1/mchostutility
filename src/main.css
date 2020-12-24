@@ -49,6 +49,10 @@ header div * {
     overflow: visible;
 }
 
+span {
+    font-size: 3.25vw;
+}
+
 header div div {
     margin-right: calc(var(--screenW) / 384);
     height: var(--headerH);
@@ -196,6 +200,7 @@ input[type=submit]:hover {
 
 .ngrok form input[type=text] {
     width: 80vw;
+    text-align: center;
 }
 
 .ver {
@@ -207,11 +212,10 @@ input[type=submit]:hover {
 a {
     pointer-events: all;
     text-decoration: none;
-    color: rgb(103, 207, 255);
+    color: rgb(123, 213, 255);
     transition: 100ms;
 }
 
 a:hover {
-    color: rgb(140, 215, 250);
-    font-size: 1.2em;
+    color: rgb(186, 233, 253);
 }
