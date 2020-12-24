@@ -129,3 +129,15 @@ header div div span {
     background: #202020;
     padding: 1%;
 }
+
+.ver {
+    position: absolute;
+    bottom: calc(var(--headerH) * 1.2);
+    font-size: calc(var(--screenW) / 120);
+}
+
+a {
+    pointer-events: all;
+    text-decoration: none;
+    color: rgb(103, 207, 255);
+}

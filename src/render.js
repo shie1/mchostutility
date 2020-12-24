@@ -1,6 +1,7 @@
 const {
     remote,
-    clipboard
+    clipboard,
+    shell
 } = require('electron');
 const cp = require('child_process');
 const path = require('path');
