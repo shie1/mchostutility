@@ -44,6 +44,7 @@ async function host() {
     writeStorage('server', server)
     require('./genfiles.js')
     let ip = await ngrok.connect({ proto: 'tcp', addr: 25565, authtoken: storage.ngrokAuth })
+    ip = ip.substring(6)
     setTimeout(() => {
         serverProcess = cp.exec(`start cmd /k "echo Server ip: ${ip} && java -Xms1024M -Xmx1024M -jar server.jar nogui"`, { cwd: path.resolve('./src/server') });
         serverProcess.on('close', () => {
