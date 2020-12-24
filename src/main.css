@@ -94,7 +94,7 @@ header div div span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: calc(var(--screenW) / 100);
+    font-size: 5vmin;
     flex-direction: column;
 }
 
@@ -126,17 +126,19 @@ input {
     background: #202020;
     color: white;
     border: none;
-    height: calc(var(--screenH) / 57.5);
+    height: 5vmin;
+    font-size: 4vmin;
 }
 
 select {
     background: #202020;
     color: white;
     border: none;
-    height: calc(var(--screenH) / 57.5);
+    height: 5vmin;
+    font-size: 4vh;
 }
 
-.host form input[type=submit] {
+.host form div {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -144,17 +146,21 @@ select {
     text-align: center;
     justify-content: center;
     height: var(--headerH);
-    font-size: calc(var(--screenW) / 120);
+    font-size: 50%;
     background: #202020;
     color: white;
     border: none;
     transition: 100ms;
 }
 
-.host form input[type=submit]:hover {
+.host form div:hover {
     background-color: #454545;
-    font-size: 1.05em;
     height: calc(var(--headerH) * 1.2);
+}
+
+.host form input[type=image] {
+    background: none;
+    filter: invert(1);
 }
 
 .host form input[type=file] {
@@ -165,7 +171,7 @@ select {
 .ver {
     position: absolute;
     bottom: calc(var(--headerH) * 1.2);
-    font-size: calc(var(--screenW) / 120);
+    font-size: 2.25vw;
 }
 
 a {
