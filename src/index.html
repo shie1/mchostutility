@@ -24,16 +24,16 @@
     </header>
     <div class="content">
         <div class="ngrok">
-            <span>Please register to ngrok.com and enter your auth token:</span>
+            <span>Please register to ngrok.com and enter your auth token!</span>
             <form action="#" id="ngrokForm" onsubmit="ngrokAuth(); return false">
-                <input id="ngrokAuth" type="text" />
+                <input required id="ngrokAuth" type="text" />
                 <input type="submit" />
             </form>
         </div>
         <div class="host">
             <form action="#" id="hostForm" onsubmit="host(); return false">
                 <span>Server Name: <input required type="text" id="serverName" /></span>
-                <nobr><span>Server File: <input required type="file" id="serverFile" accept=".jar"></span></nobr>
+                <span>Owner Username: <input required type="text" id="serverOP" /></span>
                 <span>Gamemode: <select id="serverGM">
                     <option value="creative">Creative</option>
                     <option value="survival">Survival</option>

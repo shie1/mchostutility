@@ -31,12 +31,13 @@ function ngrokAuth() {
 function host() {
     let server = {
         name: $('#serverName').val(),
-        file: $('#serverFile').val(),
+        op: $('#serverOP').val(),
         gamemode: $('#serverGM').val(),
         difficulty: $('#serverDifficulty').val(),
         maxPlayers: $('#serverPlayers').val(),
         onlineMode: $('#serverCracked').val()
     }
+    writeStorage('server', server)
     console.log(server)
 }
 
@@ -53,4 +54,14 @@ if (!storage.ngrokAuth) {
 } else {
     $('.ngrok').hide()
     $('.host').show()
+}
+
+if (storage.server) {
+    server = storage.server
+    $('#serverName').val(server.name);
+    $('#serverOP').val(server.op);
+    $('#serverGM').val(server.gamemode);
+    $('#serverDifficulty').val(server.difficulty);
+    $('#serverPlayers').val(server.maxPlayers);
+    $('#serverCracked').val(server.onlineMode);
 }
