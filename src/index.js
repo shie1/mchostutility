@@ -11,14 +11,13 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
     app.quit();
 }
 
-let devmode
 try {
     fs.readFileSync('storage.json')
-    devmode = true
 } catch {
     fs.writeFileSync('./storage.json', '{}')
-    devmode = false
 }
+
+const storage = JSON.parse(fs.readFileSync('./storage.json'))
 
 const createWindow = () => {
     // Create the browser window.
@@ -29,7 +28,7 @@ const createWindow = () => {
         frame: false,
         transparent: true,
         webPreferences: {
-            devTools: devmode,
+            devTools: storage.devmode,
             nodeIntegration: true
         }
     });
