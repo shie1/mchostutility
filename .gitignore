@@ -90,3 +90,5 @@ out/
 
 # App
 storage.json
+src/server/*.json
+src/server/world
