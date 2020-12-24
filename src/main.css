@@ -108,6 +108,11 @@ header div div span {
     width: 100vw;
 }
 
+.ngrok form {
+    display: flex;
+    flex-direction: column;
+}
+
 .host form {
     display: flex;
     justify-content: center;
@@ -158,6 +163,27 @@ select {
     height: calc(var(--headerH) * 1.2);
 }
 
+input[type=submit] {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: var(--headerH);
+    font-size: 50%;
+    background: #202020;
+    color: white;
+    border: none;
+    transition: 100ms;
+    left: 0;
+}
+
+input[type=submit]:hover {
+    background-color: #454545;
+    height: calc(var(--headerH) * 1.2);
+}
+
 .host form input[type=image] {
     background: none;
     filter: invert(1);
@@ -166,6 +192,10 @@ select {
 .host form input[type=file] {
     background: #202020;
     padding: 1%;
+}
+
+.ngrok form input[type=text] {
+    width: 80vw;
 }
 
 .ver {
