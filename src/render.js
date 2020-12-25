@@ -57,7 +57,6 @@ async function host() {
     ip = ip.substring(6)
     clipboard.writeText(ip)
     setTimeout(() => {
-
         serverProcess = cp.exec(`start cmd /k "echo Server ip: ${ip} && java -Xms1024M -Xmx1024M -jar server.jar nogui"`, { cwd: path.resolve(tosrc + '/server') });
         serverProcess.on('close', () => {
             window.close()
