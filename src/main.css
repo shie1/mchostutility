@@ -78,6 +78,7 @@ header div div span {
 }
 
 .headerB {
+    cursor: pointer;
     transition: 100ms;
 }
 
@@ -148,6 +149,7 @@ select {
 }
 
 .host form div {
+    cursor: pointer;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -211,6 +213,7 @@ input[type=submit]:hover {
 }
 
 a {
+    cursor: pointer;
     pointer-events: all;
     text-decoration: none;
     color: rgb(123, 213, 255);
